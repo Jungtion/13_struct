@@ -21,7 +21,7 @@ struct	keytab keywrds[13] = {
 	{0, "do"}        
 };
 
-void copy_word(char *word)
+void count_word(char *word)
 {
 	int i;
 	
