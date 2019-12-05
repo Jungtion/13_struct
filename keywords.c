@@ -1,11 +1,12 @@
 #define	MAX_NAME 30
+#define N_KEYS	14
 
 struct	keytab {
 	int 	nums	;	//몇번 나오냐 
 	char 	name[MAX_NAME];
 };
 
-struct	keytab keywrds[13] = {
+struct	keytab keywrds[14] = {
 	{0, "int"},
 	{0, "float"},
 	{0, "return"},
@@ -18,7 +19,8 @@ struct	keytab keywrds[13] = {
 	{0, "void"},
 	{0, "default"},
 	{0, "char"},
-	{0, "do"}        
+	{0, "do"},
+	{0, "scanf" }       
 };
 
 void count_word(char *word)
@@ -26,7 +28,7 @@ void count_word(char *word)
 	int i;
 	
 	//각 keyword별로
-	for (i=0; i<13; i++)
+	for (i=0; i<14; i++)
 	{ 
 		//if word랑 keyword랑 같으면
 		if(strncmp(word, keywrds[i].name, strlen(keywrds[i].name))==0)
@@ -41,7 +43,7 @@ void count_word(char *word)
  {
  	int i; 
  	//i번째 keyword에 대해서
- 	for (i=0;i<13 ; i++)
+ 	for (i=0;i<14; i++)
 		//printf(키워드 이름 : 빈도수); 
 		printf("%s : %i\n", keywrds[i].nums);
  }
