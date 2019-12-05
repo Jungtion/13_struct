@@ -54,7 +54,16 @@ int fget_word(FILE* fp, char *word)
 	return cnt;
 }
 
+#define	SQUARE(X) ((X)*(X))
+#define SUM(x,y)	((x)+(y))
+
 int main(int argc, char*argv[]){
+
+	int a = 5;
+	printf("%d, %d\n", SQUARE(a), SUM(a, 3));
+
+	
+	
 
    FILE *fp;
    char filepath[100];
